@@ -3,6 +3,7 @@ var LetterPadContainer = require('./LetterPadContainer.jsx');
 var LetterPad = require('./LetterPad.jsx');
 
 var toggle = false;
+var letters = ['A','B','C','D','E','F','G','H','Sch'];
 var selected1 = ['A','D','Sch'];
 var selected2 = ['B','C','D','E'];
 
@@ -10,7 +11,7 @@ let TestApp = React.createClass({
     getInitialState() {
         return {
             letterPadToggle: false,
-            letterPadContainerToggle: selected1
+            letterPadContainerSelected: null
         }
     },
 
@@ -18,8 +19,12 @@ let TestApp = React.createClass({
         alert(msg);
     },
 
-    toggleLetterPadSelection() {
-        this.setState({letterPadContainerToggle: this.state.letterPadContainerToggle === selected1 ? selected2 : selected1});
+    toggleLetterPadSelection(letter) {
+        if (letter === this.state.letterPadContainerSelected) {
+            this.setState({letterPadContainerSelected: null});
+        } else {
+            this.setState({letterPadContainerSelected: letter });
+        }
     },
 
     toggleLetterPad() {
@@ -30,8 +35,7 @@ let TestApp = React.createClass({
     return <div>
 
         <h2>LetterPadContainerTest</h2>
-        <LetterPadContainer letters={['A','B','C','D','E','F','G','H','Sch']} selectedLetters={this.state.letterPadContainerToggle} />
-        <button type="button" onClick={this.toggleLetterPadSelection}>Toggle</button>
+        <LetterPadContainer letters={letters} selected={this.state.letterPadContainerSelected} onClick={this.toggleLetterPadSelection}/>
 
         <h2>LetterPadTests</h2>
         <LetterPad key="A" letter="A" selected={this.state.letterPadToggle} onClick={this.msg}/>

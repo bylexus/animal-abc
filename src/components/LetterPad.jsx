@@ -3,20 +3,21 @@ var React = require('react');
 let LetterPad = React.createClass({
     getStyles() {
         return {
-            width: '100px',
-            height: '100px',
+            width: '10vmin',
+            height: '10vmin',
             border: '2px solid black',
             borderRadius: '100%',
             backgroundColor: this.props.selected ? 'green' : 'white',
             color: this.props.selected ? 'white' : 'black',
-            fontSize: this.props.letter.length > 1 ? '50px' : '80px',
+            fontSize: this.props.letter.length > 1 ? '5vmin' : '8vmin',
             textDecoration: 'none',
             display: 'inline-block',
-            lineHeight: '100px',
+            lineHeight: '10vmin',
             textAlign: 'center',
             verticalAlign: 'middle',
             transition: 'background-color 0.25s, color 0.25s',
-            boxShadow: '0px 0px 5px rgba(0,0,0,0.3)'
+            boxShadow: '0px 0px 5px rgba(0,0,0,0.3)',
+            textShadow: '0px 0px 5px rgba(0,0,0,0.3)'
         };
     },
 

@@ -10,17 +10,19 @@ let LetterPadContainer = React.createClass({
         };
     },
 
-    isLetterSelected(letter) {
-        let selected = this.props.selectedLetters || [];
-        return selected.indexOf(letter) > -1;
+    onClick(letter) {
+        if (this.props.onClick instanceof Function) {
+            this.props.onClick(letter);
+        }
     },
 
     render() {
         let letters = this.props.letters || [];
+        let selected = this.props.selected || null;
         return <div style={this.getStyles()}>
             {letters.map((letter) => {
                 return (
-                <LetterPad key={letter} letter={letter} selected={ this.isLetterSelected(letter) } />
+                <LetterPad key={letter} letter={letter} selected={ selected === letter } onClick={this.onClick.bind(this,letter)} />
                 );
             })}
 
