@@ -7,9 +7,12 @@ module.exports = function(grunt) {
         webpack: {
             'app-dev': {
                 devtool: 'source-map',
-                entry: './src/app.jsx',
+                entry: {
+                    app: './src/app.jsx',
+                    'component-tests': './src/component-tests.jsx'
+                },
                 output: {
-                    filename: 'app-debug.js',
+                    filename: '[name]-debug.js',
                     path: 'debug/'
                 },
                 watch: true,
