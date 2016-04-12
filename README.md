@@ -9,3 +9,10 @@ This project uses ReactJS, webpack, BabelJS ...
 
 
 WORK IN PROGRESS, NOTHING HERE YET
+
+Sounds from:
+  - http://soundbible.com
+  - http://www.freeinfosociety.com
+
+Images from:
+  - https://pixabay.com

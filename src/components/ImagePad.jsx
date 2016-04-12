@@ -24,9 +24,11 @@ let ImagePad = React.createClass({
         <a ref="cmp" href="#" style={{
                 width: '15vw',
                 height: '15vw',
-                border: discovered ? '3px solid #11ff11' : (selected ? '3px solid #1111ff' : '1px solid black'),
-                boxShadow: discovered ? '0px 0px 5px #11ff11,0px 0px 5px #11ff11' : (selected ? '0px 0px 5px #11f,0px 0px 5px #11f': 'none'),
-                margin: '0.1em',
+                maxWidth: '200px',
+                maxHeight: '200px',
+                border: discovered ? '3px solid #11ff11' : (selected ? '3px solid #1111ff' : '3px solid rgba(0,0,0,0.3)'),
+                boxShadow: discovered ? '0px 0px 5px #11ff11,0px 0px 5px #11ff11' : (selected ? '0px 0px 5px #11f,0px 0px 5px #11f': '0px 0px 5px rgba(0,0,0,0.3)'),
+                margin: '3px',
                 borderRadius: '5%',
                 display: 'inline-flex',
                 flexDirection: 'column',
@@ -48,7 +50,7 @@ let ImagePad = React.createClass({
                 padding: '0.1em',
                 color: 'black',
                 fontFamily: 'sans-serif',
-                fontSize: '3vw',
+                fontSize: this.props.fontSize || '3vw',
                 textAlign: 'center',
                 visibility: discovered ? 'visible' : 'hidden'
             }}>{this.props.name}</div>

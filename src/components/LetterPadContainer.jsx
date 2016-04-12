@@ -4,9 +4,9 @@ var LetterPad = require('./LetterPad.jsx');
 let LetterPadContainer = React.createClass({
     getStyles() {
         return {
-            padding: '1em',
-            backgroundColor: '#eee',
-            border: '1px solid #888'
+            display: 'inline-flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
         };
     },
 

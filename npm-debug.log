@@ -1,0 +1,381 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/local/bin/node',
+1 verbose cli   '/opt/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'react-sound',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.14.22
+3 info using node@v4.4.0
+4 verbose install initial load of /Users/alex/dev/animal-abc/package.json
+5 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/babel-core/package.json
+6 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/babel-loader/package.json
+7 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/babel-preset-es2015/package.json
+8 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/babel-preset-react/package.json
+9 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/grunt/package.json
+10 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/grunt-webpack/package.json
+11 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/load-grunt-tasks/package.json
+12 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/react/package.json
+13 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/react-dom/package.json
+14 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/webpack/package.json
+15 verbose installManyTop reading scoped package data from /Users/alex/dev/animal-abc/node_modules/webpack-dev-server/package.json
+16 info package.json grunt-webpack@1.0.11 No license field.
+17 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/package.json
+18 silly cache add args [ 'react-sound', null ]
+19 verbose cache add spec react-sound
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'react-sound',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'react-sound',
+20 silly cache add   rawSpec: '',
+20 silly cache add   spec: 'latest',
+20 silly cache add   type: 'tag' }
+21 silly addNamed react-sound@latest
+22 verbose addNamed "latest" is being treated as a dist-tag for react-sound
+23 info addNameTag [ 'react-sound', 'latest' ]
+24 silly mapToRegistry name react-sound
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/react-sound
+28 verbose addNameTag registry:https://registry.npmjs.org/react-sound not in flight; fetching
+29 verbose request uri https://registry.npmjs.org/react-sound
+30 verbose request no auth needed
+31 info attempt registry request try #1 at 17:53:34
+32 verbose request using bearer token for auth
+33 verbose request id d7e6027028e0d3ea
+34 http request GET https://registry.npmjs.org/react-sound
+35 http 200 https://registry.npmjs.org/react-sound
+36 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+36 verbose headers   etag: '"5EQV7JEENZ43M0AJDK747XX1K"',
+36 verbose headers   'content-type': 'application/json',
+36 verbose headers   'content-encoding': 'gzip',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'transfer-encoding': 'chunked',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Tue, 12 Apr 2016 15:53:35 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1460476415.021577,VS0,VE191',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 silly get cb [ 200,
+37 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+37 silly get     etag: '"5EQV7JEENZ43M0AJDK747XX1K"',
+37 silly get     'content-type': 'application/json',
+37 silly get     'content-encoding': 'gzip',
+37 silly get     'cache-control': 'max-age=300',
+37 silly get     'transfer-encoding': 'chunked',
+37 silly get     'accept-ranges': 'bytes',
+37 silly get     date: 'Tue, 12 Apr 2016 15:53:35 GMT',
+37 silly get     via: '1.1 varnish',
+37 silly get     connection: 'keep-alive',
+37 silly get     'x-served-by': 'cache-fra1246-FRA',
+37 silly get     'x-cache': 'MISS',
+37 silly get     'x-cache-hits': '0',
+37 silly get     'x-timer': 'S1460476415.021577,VS0,VE191',
+37 silly get     vary: 'Accept-Encoding' } ]
+38 verbose get saving react-sound to /Users/alex/.npm/registry.npmjs.org/react-sound/.cache.json
+39 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+40 silly addNameTag next cb for react-sound with tag latest
+41 silly addNamed react-sound@0.3.0
+42 verbose addNamed "0.3.0" is a plain semver version for react-sound
+43 silly mapToRegistry name react-sound
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/react-sound
+47 verbose addRemoteTarball https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz not in flight; adding
+48 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz',
+48 verbose addRemoteTarball   'd9502dc85155637b0b6ab57fe195c101c1b9e009' ]
+49 info retry fetch attempt 1 at 17:53:35
+50 info attempt registry request try #1 at 17:53:35
+51 http fetch GET https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz
+52 verbose request using bearer token for auth
+53 http fetch 200 https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz
+54 silly fetchAndShaCheck shasum d9502dc85155637b0b6ab57fe195c101c1b9e009
+55 verbose addTmpTarball /var/folders/8q/xjq_1sb91nj8kpqlh9mgndq00000gn/T/npm-21890-42a7e96a/registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz not in flight; adding
+56 verbose addTmpTarball already have metadata; skipping unpack for react-sound@0.3.0
+57 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+58 silly cache afterAdd react-sound@0.3.0
+59 verbose afterAdd /Users/alex/.npm/react-sound/0.3.0/package/package.json not in flight; writing
+60 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+61 verbose afterAdd /Users/alex/.npm/react-sound/0.3.0/package/package.json written
+62 silly install resolved [ { name: 'react-sound',
+62 silly install resolved     version: '0.3.0',
+62 silly install resolved     description: 'React Sound component using soundmanager2',
+62 silly install resolved     main: 'lib/index.js',
+62 silly install resolved     scripts:
+62 silly install resolved      { start: 'cd examples && webpack-dev-server --port 3000 --progress --inline --hot --devtool eval-source-map',
+62 silly install resolved        build: 'npm run lint && babel src --out-dir lib',
+62 silly install resolved        clean: 'rimraf ./lib',
+62 silly install resolved        lint: 'eslint src test',
+62 silly install resolved        prepublish: 'npm run clean && npm run build' },
+62 silly install resolved     keywords: [ 'react', 'react-component', 'sound', 'soundmanager2' ],
+62 silly install resolved     author:
+62 silly install resolved      { name: 'Leonardo Andres Garcia Crespo',
+62 silly install resolved        email: 'leoasis@gmail.com' },
+62 silly install resolved     license: 'ISC',
+62 silly install resolved     homepage: 'https://github.com/leoasis/react-sound',
+62 silly install resolved     peerDependencies: { soundmanager2: '^2.97.20150601-a', react: '>=0.13.3 <0.15.0' },
+62 silly install resolved     devDependencies:
+62 silly install resolved      { rimraf: '^2.4.0',
+62 silly install resolved        eslint: '^0.22.1',
+62 silly install resolved        'webpack-dev-server': '^1.9.0',
+62 silly install resolved        'node-libs-browser': '^0.5.2',
+62 silly install resolved        webpack: '^1.9.10',
+62 silly install resolved        babel: '^5.5.6',
+62 silly install resolved        'react-hot-loader': '^1.2.7',
+62 silly install resolved        'babel-eslint': '^3.1.15',
+62 silly install resolved        'babel-core': '^5.5.6',
+62 silly install resolved        'babel-loader': '^5.1.4',
+62 silly install resolved        'eslint-plugin-react': '^2.5.0' },
+62 silly install resolved     gitHead: 'fafaad510834937afe7a4d5e03d76229a8ec6379',
+62 silly install resolved     _id: 'react-sound@0.3.0',
+62 silly install resolved     _shasum: 'd9502dc85155637b0b6ab57fe195c101c1b9e009',
+62 silly install resolved     _from: 'react-sound@latest',
+62 silly install resolved     _npmVersion: '2.12.1',
+62 silly install resolved     _nodeVersion: '0.12.7',
+62 silly install resolved     _npmUser: { name: 'leoasis', email: 'leoasis@gmail.com' },
+62 silly install resolved     dist:
+62 silly install resolved      { shasum: 'd9502dc85155637b0b6ab57fe195c101c1b9e009',
+62 silly install resolved        tarball: 'https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz' },
+62 silly install resolved     maintainers: [ [Object] ],
+62 silly install resolved     directories: {},
+62 silly install resolved     _resolved: 'https://registry.npmjs.org/react-sound/-/react-sound-0.3.0.tgz' } ]
+63 info install react-sound@0.3.0 into /Users/alex/dev/animal-abc
+64 info installOne react-sound@0.3.0
+65 verbose installOne of react-sound to /Users/alex/dev/animal-abc not in flight; installing
+66 verbose correctMkdir /Users/alex/.npm/_locks correctMkdir not in flight; initializing
+67 verbose lock using /Users/alex/.npm/_locks/react-sound-dd3c6b6f8c5fe474.lock for /Users/alex/dev/animal-abc/node_modules/react-sound
+68 silly install write writing react-sound 0.3.0 to /Users/alex/dev/animal-abc/node_modules/react-sound
+69 verbose unbuild node_modules/react-sound
+70 silly gentlyRm /Users/alex/dev/animal-abc/node_modules/react-sound is being purged from base /Users/alex/dev/animal-abc
+71 verbose gentlyRm don't care about contents; nuking /Users/alex/dev/animal-abc/node_modules/react-sound
+72 verbose tar unpack /Users/alex/.npm/react-sound/0.3.0/package.tgz
+73 verbose tar unpacking to /Users/alex/dev/animal-abc/node_modules/react-sound
+74 silly gentlyRm /Users/alex/dev/animal-abc/node_modules/react-sound is being purged
+75 verbose gentlyRm don't care about contents; nuking /Users/alex/dev/animal-abc/node_modules/react-sound
+76 silly gunzTarPerm modes [ '755', '644' ]
+77 silly gunzTarPerm extractEntry package.json
+78 silly gunzTarPerm extractEntry .npmignore
+79 silly gunzTarPerm extractEntry README.md
+80 silly gunzTarPerm extractEntry LICENSE.txt
+81 silly gunzTarPerm extractEntry .eslintrc
+82 silly gunzTarPerm extractEntry lib/index.js
+83 silly gunzTarPerm extractEntry .babelrc
+84 verbose write writing to /Users/alex/dev/animal-abc/node_modules/react-sound/package.json
+85 info preinstall react-sound@0.3.0
+86 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/node_modules/react-sound/package.json
+87 silly prepareForInstallMany adding soundmanager2@^2.97.20150601-a from react-sound peerDependencies
+88 silly prepareForInstallMany adding react@>=0.13.3 <0.15.0 from react-sound peerDependencies
+89 warn peerDependencies The peer dependency soundmanager2@^2.97.20150601-a included from react-sound will no
+90 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+91 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+92 warn peerDependencies The peer dependency react@>=0.13.3 <0.15.0 included from react-sound will no
+93 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+94 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+95 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/node_modules/react-sound/package.json
+96 silly install resolved []
+97 verbose about to build /Users/alex/dev/animal-abc/node_modules/react-sound
+98 info build /Users/alex/dev/animal-abc/node_modules/react-sound
+99 info linkStuff react-sound@0.3.0
+100 silly linkStuff react-sound@0.3.0 has /Users/alex/dev/animal-abc/node_modules as its parent node_modules
+101 verbose linkBins react-sound@0.3.0
+102 verbose linkMans react-sound@0.3.0
+103 verbose rebuildBundles react-sound@0.3.0
+104 info install react-sound@0.3.0
+105 info postinstall react-sound@0.3.0
+106 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/package.json
+107 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/babel-core/package.json
+108 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/babel-loader/package.json
+109 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/babel-preset-es2015/package.json
+110 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/babel-preset-react/package.json
+111 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/grunt/package.json
+112 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/grunt-webpack/package.json
+113 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/load-grunt-tasks/package.json
+114 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/react/package.json
+115 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/react-dom/package.json
+116 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/react-sound/package.json
+117 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/webpack/package.json
+118 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/webpack-dev-server/package.json
+119 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/.bin/grunt/package.json
+120 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/.bin/webpack/package.json
+121 verbose targetResolver reading package data from /Users/alex/dev/animal-abc/node_modules/.bin/webpack-dev-server/package.json
+122 verbose already installed skipping react@>=0.13.3 <0.15.0 /Users/alex/dev/animal-abc
+123 silly cache add args [ 'soundmanager2@^2.97.20150601-a', null ]
+124 verbose cache add spec soundmanager2@^2.97.20150601-a
+125 silly cache add parsed spec Result {
+125 silly cache add   raw: 'soundmanager2@^2.97.20150601-a',
+125 silly cache add   scope: null,
+125 silly cache add   name: 'soundmanager2',
+125 silly cache add   rawSpec: '^2.97.20150601-a',
+125 silly cache add   spec: '>=2.97.20150601-a <3.0.0',
+125 silly cache add   type: 'range' }
+126 silly addNamed soundmanager2@>=2.97.20150601-a <3.0.0
+127 verbose addNamed ">=2.97.20150601-a <3.0.0" is a valid semver range for soundmanager2
+128 silly addNameRange { name: 'soundmanager2',
+128 silly addNameRange   range: '>=2.97.20150601-a <3.0.0',
+128 silly addNameRange   hasData: false }
+129 silly mapToRegistry name soundmanager2
+130 silly mapToRegistry using default registry
+131 silly mapToRegistry registry https://registry.npmjs.org/
+132 silly mapToRegistry uri https://registry.npmjs.org/soundmanager2
+133 verbose addNameRange registry:https://registry.npmjs.org/soundmanager2 not in flight; fetching
+134 verbose request uri https://registry.npmjs.org/soundmanager2
+135 verbose request no auth needed
+136 info attempt registry request try #1 at 17:53:35
+137 verbose request using bearer token for auth
+138 http request GET https://registry.npmjs.org/soundmanager2
+139 http 200 https://registry.npmjs.org/soundmanager2
+140 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+140 verbose headers   etag: '"7FX9VYCL7VPK1NYNKX64NIWAX"',
+140 verbose headers   'content-type': 'application/json',
+140 verbose headers   'cache-control': 'max-age=300',
+140 verbose headers   'content-length': '6953',
+140 verbose headers   'accept-ranges': 'bytes',
+140 verbose headers   date: 'Tue, 12 Apr 2016 15:53:35 GMT',
+140 verbose headers   via: '1.1 varnish',
+140 verbose headers   connection: 'keep-alive',
+140 verbose headers   'x-served-by': 'cache-fra1231-FRA',
+140 verbose headers   'x-cache': 'MISS',
+140 verbose headers   'x-cache-hits': '0',
+140 verbose headers   'x-timer': 'S1460476415.484372,VS0,VE438',
+140 verbose headers   vary: 'Accept-Encoding' }
+141 silly get cb [ 200,
+141 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+141 silly get     etag: '"7FX9VYCL7VPK1NYNKX64NIWAX"',
+141 silly get     'content-type': 'application/json',
+141 silly get     'cache-control': 'max-age=300',
+141 silly get     'content-length': '6953',
+141 silly get     'accept-ranges': 'bytes',
+141 silly get     date: 'Tue, 12 Apr 2016 15:53:35 GMT',
+141 silly get     via: '1.1 varnish',
+141 silly get     connection: 'keep-alive',
+141 silly get     'x-served-by': 'cache-fra1231-FRA',
+141 silly get     'x-cache': 'MISS',
+141 silly get     'x-cache-hits': '0',
+141 silly get     'x-timer': 'S1460476415.484372,VS0,VE438',
+141 silly get     vary: 'Accept-Encoding' } ]
+142 verbose get saving soundmanager2 to /Users/alex/.npm/registry.npmjs.org/soundmanager2/.cache.json
+143 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+144 silly addNameRange number 2 { name: 'soundmanager2',
+144 silly addNameRange   range: '>=2.97.20150601-a <3.0.0',
+144 silly addNameRange   hasData: true }
+145 silly addNameRange versions [ 'soundmanager2', [ '2.97.20150601', '2.97.20150601-a' ] ]
+146 silly addNamed soundmanager2@2.97.20150601-a
+147 verbose addNamed "2.97.20150601-a" is a plain semver version for soundmanager2
+148 silly mapToRegistry name soundmanager2
+149 silly mapToRegistry using default registry
+150 silly mapToRegistry registry https://registry.npmjs.org/
+151 silly mapToRegistry uri https://registry.npmjs.org/soundmanager2
+152 verbose addRemoteTarball https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz not in flight; adding
+153 verbose addRemoteTarball [ 'https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz',
+153 verbose addRemoteTarball   'd1a2f61bb2cd38f7a7209fbf456de20e5eaef74f' ]
+154 info retry fetch attempt 1 at 17:53:36
+155 info attempt registry request try #1 at 17:53:36
+156 http fetch GET https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz
+157 verbose request using bearer token for auth
+158 http fetch 200 https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz
+159 silly fetchAndShaCheck shasum d1a2f61bb2cd38f7a7209fbf456de20e5eaef74f
+160 verbose addTmpTarball /var/folders/8q/xjq_1sb91nj8kpqlh9mgndq00000gn/T/npm-21890-42a7e96a/registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz not in flight; adding
+161 verbose addTmpTarball already have metadata; skipping unpack for soundmanager2@2.97.20150601-a
+162 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+163 silly cache afterAdd soundmanager2@2.97.20150601-a
+164 verbose afterAdd /Users/alex/.npm/soundmanager2/2.97.20150601-a/package/package.json not in flight; writing
+165 verbose correctMkdir /Users/alex/.npm correctMkdir not in flight; initializing
+166 verbose afterAdd /Users/alex/.npm/soundmanager2/2.97.20150601-a/package/package.json written
+167 silly install resolved [ { name: 'soundmanager2',
+167 silly install resolved     version: '2.97.20150601-a',
+167 silly install resolved     description: 'A JavaScript Sound API supporting MP3, MPEG4 and HTML5 audio + RTMP, providing reliable cross-browser/platform audio control in as little as 12 KB.',
+167 silly install resolved     main: 'script/soundmanager2.js',
+167 silly install resolved     directories: { lib: './script' },
+167 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+167 silly install resolved     repository:
+167 silly install resolved      { type: 'git',
+167 silly install resolved        url: 'https://github.com/scottschiller/SoundManager2/' },
+167 silly install resolved     keywords: [ 'browser', 'audio', 'sound', 'mp3', 'mpeg4', 'html5' ],
+167 silly install resolved     author:
+167 silly install resolved      { name: 'Scott Schiller',
+167 silly install resolved        email: 'spam@schillmania.com',
+167 silly install resolved        url: 'http://schillmania.com/' },
+167 silly install resolved     license: 'BSD',
+167 silly install resolved     bugs: { url: 'https://github.com/scottschiller/SoundManager2/issues/' },
+167 silly install resolved     homepage: 'http://www.schillmania.com/projects/soundmanager2/',
+167 silly install resolved     gitHead: '49676c9d318fb95a7b6afba075751e29c3ab10d0',
+167 silly install resolved     _id: 'soundmanager2@2.97.20150601-a',
+167 silly install resolved     _shasum: 'd1a2f61bb2cd38f7a7209fbf456de20e5eaef74f',
+167 silly install resolved     _from: 'soundmanager2@>=2.97.20150601-a <3.0.0',
+167 silly install resolved     _npmVersion: '2.1.10',
+167 silly install resolved     _nodeVersion: '0.10.3',
+167 silly install resolved     _npmUser: { name: 'scottschiller', email: 'spam@schillmania.com' },
+167 silly install resolved     dist:
+167 silly install resolved      { shasum: 'd1a2f61bb2cd38f7a7209fbf456de20e5eaef74f',
+167 silly install resolved        tarball: 'https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz' },
+167 silly install resolved     maintainers: [ [Object] ],
+167 silly install resolved     _resolved: 'https://registry.npmjs.org/soundmanager2/-/soundmanager2-2.97.20150601-a.tgz' } ]
+168 info install soundmanager2@2.97.20150601-a into /Users/alex/dev/animal-abc
+169 info installOne soundmanager2@2.97.20150601-a
+170 verbose installOne of soundmanager2 to /Users/alex/dev/animal-abc not in flight; installing
+171 verbose correctMkdir /Users/alex/.npm/_locks correctMkdir not in flight; initializing
+172 verbose lock using /Users/alex/.npm/_locks/soundmanager2-bd70a2c56c9da03e.lock for /Users/alex/dev/animal-abc/node_modules/soundmanager2
+173 silly install write writing soundmanager2 2.97.20150601-a to /Users/alex/dev/animal-abc/node_modules/soundmanager2
+174 verbose unbuild node_modules/soundmanager2
+175 silly gentlyRm /Users/alex/dev/animal-abc/node_modules/soundmanager2 is being purged from base /Users/alex/dev/animal-abc
+176 verbose gentlyRm don't care about contents; nuking /Users/alex/dev/animal-abc/node_modules/soundmanager2
+177 verbose tar unpack /Users/alex/.npm/soundmanager2/2.97.20150601-a/package.tgz
+178 verbose tar unpacking to /Users/alex/dev/animal-abc/node_modules/soundmanager2
+179 silly gentlyRm /Users/alex/dev/animal-abc/node_modules/soundmanager2 is being purged
+180 verbose gentlyRm don't care about contents; nuking /Users/alex/dev/animal-abc/node_modules/soundmanager2
+181 silly gunzTarPerm modes [ '755', '644' ]
+182 silly gunzTarPerm extractEntry package.json
+183 silly gunzTarPerm extractEntry .npmignore
+184 silly gunzTarPerm extractEntry README.rdoc
+185 silly gunzTarPerm extractEntry license.txt
+186 silly gunzTarPerm modified mode [ 'license.txt', 438, 420 ]
+187 silly gunzTarPerm extractEntry script/soundmanager2-jsmin.js
+188 silly gunzTarPerm extractEntry script/soundmanager2-nodebug-jsmin.js
+189 silly gunzTarPerm extractEntry script/soundmanager2-nodebug.js
+190 silly gunzTarPerm extractEntry script/soundmanager2.js
+191 silly gunzTarPerm extractEntry swf/soundmanager2.swf
+192 silly gunzTarPerm extractEntry swf/soundmanager2_debug.swf
+193 silly gunzTarPerm extractEntry swf/soundmanager2_flash9.swf
+194 silly gunzTarPerm extractEntry swf/soundmanager2_flash9_debug.swf
+195 silly gunzTarPerm extractEntry swf/soundmanager2_flash_xdomain.zip
+196 verbose write writing to /Users/alex/dev/animal-abc/node_modules/soundmanager2/package.json
+197 info preinstall soundmanager2@2.97.20150601-a
+198 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/node_modules/soundmanager2/package.json
+199 verbose readDependencies loading dependencies from /Users/alex/dev/animal-abc/node_modules/soundmanager2/package.json
+200 silly install resolved []
+201 verbose about to build /Users/alex/dev/animal-abc/node_modules/soundmanager2
+202 info build /Users/alex/dev/animal-abc/node_modules/soundmanager2
+203 info linkStuff soundmanager2@2.97.20150601-a
+204 silly linkStuff soundmanager2@2.97.20150601-a has /Users/alex/dev/animal-abc/node_modules as its parent node_modules
+205 verbose linkBins soundmanager2@2.97.20150601-a
+206 verbose linkMans soundmanager2@2.97.20150601-a
+207 verbose rebuildBundles soundmanager2@2.97.20150601-a
+208 info install soundmanager2@2.97.20150601-a
+209 info postinstall soundmanager2@2.97.20150601-a
+210 verbose unlock done using /Users/alex/.npm/_locks/soundmanager2-bd70a2c56c9da03e.lock for /Users/alex/dev/animal-abc/node_modules/soundmanager2
+211 verbose unlock done using /Users/alex/.npm/_locks/react-sound-dd3c6b6f8c5fe474.lock for /Users/alex/dev/animal-abc/node_modules/react-sound
+212 verbose validateInstall loading /Users/alex/dev/animal-abc/package.json for validation
+213 verbose stack Error: The package react@15.0.1 does not satisfy its siblings' peerDependencies requirements!
+213 verbose stack     at /opt/local/lib/node_modules/npm/lib/install.js:125:32
+213 verbose stack     at /opt/local/lib/node_modules/npm/lib/install.js:268:7
+213 verbose stack     at /opt/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+213 verbose stack     at /opt/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+213 verbose stack     at cb (/opt/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+213 verbose stack     at /opt/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+213 verbose stack     at cb (/opt/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+213 verbose stack     at /opt/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+213 verbose stack     at cb (/opt/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+213 verbose stack     at /opt/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+214 verbose cwd /Users/alex/dev/animal-abc
+215 error Darwin 15.4.0
+216 error argv "/opt/local/bin/node" "/opt/local/bin/npm" "install" "react-sound" "--save-dev"
+217 error node v4.4.0
+218 error npm  v2.14.22
+219 error code EPEERINVALID
+220 error peerinvalid The package react@15.0.1 does not satisfy its siblings' peerDependencies requirements!
+220 error peerinvalid Peer react-dom@15.0.1 wants react@^15.0.1
+220 error peerinvalid Peer react-sound@0.3.0 wants react@>=0.13.3 <0.15.0
+221 verbose exit [ 1, true ]

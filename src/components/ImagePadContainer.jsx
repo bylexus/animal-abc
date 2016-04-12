@@ -4,15 +4,15 @@ var ImagePad = require('./ImagePad.jsx');
 let ImagePadContainer = React.createClass({
     getStyles() {
         return {
-            padding: '1em',
-            backgroundColor: '#eee',
-            border: '1px solid #888'
+            display: 'inline-flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
         };
     },
 
-    onClick(name) {
+    onClick(name,conf) {
         if (this.props.onClick instanceof Function) {
-            this.props.onClick(name);
+            this.props.onClick(name,conf);
         }
     },
 
@@ -27,9 +27,10 @@ let ImagePadContainer = React.createClass({
                 <ImagePad key={imageConf.name}
                     name={imageConf.name}
                     imageUrl={imageConf.imageUrl}
-                    onClick={this.onClick.bind(this,imageConf.name)}
-                    discovered={discovered.indexOf(imageConf.name) > -1}
-                    selected={selected === imageConf.name}/>
+                    onClick={this.onClick.bind(this,imageConf.name,imageConf)}
+                    discovered={discovered.indexOf(imageConf.name,imageConf) > -1}
+                    selected={selected === imageConf.name}
+                    fontSize={imageConf.fontSize || null} />
                 );
             })}
         </div>;

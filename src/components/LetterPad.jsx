@@ -9,16 +9,17 @@ let LetterPad = React.createClass({
 
     getStyles() {
         return {
-            width: '10vw',
-            height: '10vw',
+            width: '5vw',
+            height: '5vw',
             border: '2px solid black',
             borderRadius: '100%',
-            backgroundColor: this.props.selected ? 'green' : 'white',
+            margin: '0.1em',
+            backgroundColor: this.props.selected ? '#22f' : 'white',
             color: this.props.selected ? 'white' : 'black',
-            fontSize: this.props.letter.length > 1 ? '4vw' : '8vw',
+            fontSize: this.props.letter.length > 1 ? '2vw' : '4vw',
             textDecoration: 'none',
             display: 'inline-block',
-            lineHeight: '10vw',
+            lineHeight: '5vw',
             textAlign: 'center',
             verticalAlign: 'middle',
             opacity: 0,
