@@ -1,6 +1,7 @@
 let React = require('react');
 let LetterPadContainer = require('./LetterPadContainer.jsx');
 let ImagePadContainer = require('./ImagePadContainer.jsx');
+let WrongDisplay = require('./WrongDisplay.jsx');
 let DataManager = require('../DataManager.js');
 
 let GameBoard = React.createClass({
@@ -9,7 +10,8 @@ let GameBoard = React.createClass({
             selectedLetter: null,
             selectedImage: null,
             images: [],
-            discoveredImages: []
+            discoveredImages: [],
+            isWrong: false
         };
     },
 
@@ -60,7 +62,8 @@ let GameBoard = React.createClass({
     wrong() {
         this.setState({
             selectedImage: null,
-            selectedLetter: null
+            selectedLetter: null,
+            isWrong: true
         });
     },
 
@@ -74,11 +77,17 @@ let GameBoard = React.createClass({
         });
     },
 
+    resetWrongState: function() {
+        this.setState({isWrong: false});
+    },
+
     render() {
         let selected = this.state.selectedImage ? this.state.selectedImage.name : null;
+        let wrong = this.state.isWrong ? (<WrongDisplay onDone={this.resetWrongState} />) : null;
         return (
             <div>
                 <div style={{
+                    position: 'relative',
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'stretch'
@@ -108,6 +117,8 @@ let GameBoard = React.createClass({
                             onClick={this.onLetterSelection}
                             selected={this.state.selectedLetter} />
                     </div>
+
+                    {wrong}
                 </div>
 
                 <div style={{textAlign: 'center',marginTop: '2em'}}>
@@ -126,6 +137,8 @@ let GameBoard = React.createClass({
                         padding: '0.2em',
                         borderRadius: '100%'
                     }} onClick={this.doReset}>↺</a></div>
+
+
             </div>
         );
     }
