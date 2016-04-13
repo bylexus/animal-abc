@@ -67,7 +67,7 @@ let GameBoard = React.createClass({
     doReset(e) {
         if (e) e.preventDefault();
         this.setState({
-            images: DataManager.getRandomImages(),
+            images: DataManager.getRandomImages(12),
             selectedImage: null,
             selectedLetter: null,
             discoveredImages: []
@@ -99,6 +99,7 @@ let GameBoard = React.createClass({
 
                     <div style={{
                         width: '40vw',
+                        minWidth: '30vw',
                         padding: '1em',
                         backgroundColor: '#eee',
                         border: '1px solid #888'}}>
