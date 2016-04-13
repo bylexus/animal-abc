@@ -28,7 +28,6 @@ const images = [
     {name: 'Muschel', imageUrl: 'resources/animal-images/muschel1.jpg'},
     {name: 'Kuh', imageUrl: 'resources/animal-images/cow1.jpg', soundUrl: 'resources/animal-sounds/cow1.mp3'},
     {name: 'Schaf', imageUrl: 'resources/animal-images/schaf1.jpg', soundUrl: 'resources/animal-sounds/schaf1.mp3'}
-
 ];
 
 let getRandomImages = function(nr) {
