@@ -2,7 +2,9 @@ let React = require('react');
 let LetterPadContainer = require('./LetterPadContainer.jsx');
 let ImagePadContainer = require('./ImagePadContainer.jsx');
 let WrongDisplay = require('./WrongDisplay.jsx');
+let SuccessDisplay = require('./SuccessDisplay.jsx');
 let DataManager = require('../DataManager.js');
+let AudioPlayer = require('../AudioPlayer.js');
 
 let GameBoard = React.createClass({
     getInitialState() {
@@ -11,7 +13,8 @@ let GameBoard = React.createClass({
             selectedImage: null,
             images: [],
             discoveredImages: [],
-            isWrong: false
+            isWrong: false,
+            allDiscovered: false
         };
     },
 
@@ -42,19 +45,18 @@ let GameBoard = React.createClass({
 
     discover(selectedImage) {
         let discovered = this.state.discoveredImages;
-        let audio = document.getElementById('audioPlayer');
 
         if (selectedImage.soundUrl) {
-            audio.src = selectedImage.soundUrl;
-            audio.load();
-            audio.play();
+            AudioPlayer.play(selectedImage.soundUrl);
         }
 
         discovered.push(selectedImage.name);
+
         this.setState({
             discoveredImages: discovered,
             selectedImage: null,
-            selectedLetter: null
+            selectedLetter: null,
+            allDiscovered: discovered.length === this.state.images.length ? true : false
         });
 
     },
@@ -73,7 +75,8 @@ let GameBoard = React.createClass({
             images: DataManager.getRandomImages(12),
             selectedImage: null,
             selectedLetter: null,
-            discoveredImages: []
+            discoveredImages: [],
+            allDiscovered: false
         });
     },
 
@@ -84,6 +87,7 @@ let GameBoard = React.createClass({
     render() {
         let selected = this.state.selectedImage ? this.state.selectedImage.name : null;
         let wrong = this.state.isWrong ? (<WrongDisplay onDone={this.resetWrongState} />) : null;
+        let success = this.state.allDiscovered ? (<SuccessDisplay onDone={this.doReset} />) : null;
         return (
             <div>
                 <div style={{
@@ -119,6 +123,7 @@ let GameBoard = React.createClass({
                     </div>
 
                     {wrong}
+                    {success}
                 </div>
 
                 <div style={{textAlign: 'center',marginTop: '2em'}}>
