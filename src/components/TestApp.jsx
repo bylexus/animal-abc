@@ -4,10 +4,7 @@ var LetterPad = require('./LetterPad.jsx');
 var ImagePad = require('./ImagePad.jsx');
 var ImagePadContainer = require('./ImagePadContainer.jsx');
 
-var toggle = false;
 var letters = ['A','B','C','D','E','F','G','H','SCH'];
-var selected1 = ['A','D','SCH'];
-var selected2 = ['B','C','D','E'];
 
 var images = [
     {name: 'Schaf', imageUrl: 'resources/animal-images/schaf1.jpg'},

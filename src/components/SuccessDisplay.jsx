@@ -2,6 +2,10 @@ let React = require('react');
 let AudioPlayer = require('../AudioPlayer.js');
 
 let SuccessDisplay = React.createClass({
+    propTypes: {
+        onDone: React.PropTypes.func
+    },
+
 
     componentDidMount() {
         AudioPlayer.play('resources/tadaa.mp3');

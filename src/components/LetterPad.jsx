@@ -1,6 +1,12 @@
 var React = require('react');
 
 let LetterPad = React.createClass({
+    propTypes: {
+        selected: React.PropTypes.bool,
+        letter: React.PropTypes.string,
+        onClick: React.PropTypes.func
+    },
+    
     getInitialState() {
         return {
             selected: false

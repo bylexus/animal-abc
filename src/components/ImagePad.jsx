@@ -1,6 +1,15 @@
 var React = require('react');
 
 let ImagePad = React.createClass({
+    propTypes: {
+        discovered: React.PropTypes.bool,
+        onClick: React.PropTypes.func,
+        imageUrl: React.PropTypes.string,
+        selected: React.PropTypes.bool,
+        name: React.PropTypes.string,
+        fontSize: React.PropTypes.string
+    },
+
     componentDidMount() {
         window.requestAnimationFrame(() => {
             this.refs.cmp.style.opacity = 1;

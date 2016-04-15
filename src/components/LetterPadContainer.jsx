@@ -2,6 +2,12 @@ var React = require('react');
 var LetterPad = require('./LetterPad.jsx');
 
 let LetterPadContainer = React.createClass({
+    propTypes: {
+        onClick: React.PropTypes.func,
+        letters: React.PropTypes.array,
+        selected: React.PropTypes.string
+    },
+
     getStyles() {
         return {
             display: 'inline-flex',

@@ -2,6 +2,13 @@ var React = require('react');
 var ImagePad = require('./ImagePad.jsx');
 
 let ImagePadContainer = React.createClass({
+    propTypes: {
+        onClick: React.PropTypes.func,
+        images: React.PropTypes.array,
+        discoveredImages: React.PropTypes.array,
+        selectedImage: React.PropTypes.string
+    },
+
     getStyles() {
         return {
             display: 'inline-flex',

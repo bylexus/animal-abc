@@ -2,6 +2,11 @@ let React = require('react');
 let AudioPlayer = require('../AudioPlayer.js');
 
 let WrongDisplay = React.createClass({
+    propTypes: {
+        onDone: React.PropTypes.func,
+        delay: React.PropTypes.number
+    },
+
 
     componentDidMount() {
         let delay = this.props.delay || 1000;
