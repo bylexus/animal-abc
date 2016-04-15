@@ -20,7 +20,7 @@ const images = [
     {name: 'Igel', imageUrl: 'resources/animal-images/igel1.jpg'},
     {name: 'Jaguar', imageUrl: 'resources/animal-images/jaguar1.jpg'},
     {name: 'Kamel', imageUrl: 'resources/animal-images/kamel1.jpg'},
-    {name: 'Kaulquappe', imageUrl: 'resources/animal-images/kaulquappe1.jpg'},
+    {name: 'Kaulquappe', fontSize: '2vw', imageUrl: 'resources/animal-images/kaulquappe1.jpg'},
     {name: 'Kuh', imageUrl: 'resources/animal-images/cow1.jpg', soundUrl: 'resources/animal-sounds/cow1.mp3'},
     {name: 'Krokodil', imageUrl: 'resources/animal-images/krokodil1.jpg'},
     {name: 'Leguan', imageUrl: 'resources/animal-images/leguan1.jpg'},
