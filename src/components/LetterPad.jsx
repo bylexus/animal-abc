@@ -1,6 +1,11 @@
 var React = require('react');
 
 let LetterPad = React.createClass({
+    getInitialState() {
+        return {
+            selected: false
+        };
+    },
     componentDidMount() {
         window.requestAnimationFrame(() => {
             this.refs.cmp.style.opacity = 1;
@@ -14,7 +19,7 @@ let LetterPad = React.createClass({
             border: '2px solid black',
             borderRadius: '100%',
             margin: '0.1em',
-            backgroundColor: this.props.selected ? '#22f' : 'white',
+            backgroundColor: this.props.selected || this.state.selected ? '#22f' : 'white',
             color: this.props.selected ? 'white' : 'black',
             fontSize: this.props.letter.length > 1 ? '2vw' : '4vw',
             textDecoration: 'none',
@@ -37,7 +42,10 @@ let LetterPad = React.createClass({
     },
 
     render() {
-        return <a ref="cmp" href="#" style={this.getStyles()} onClick={this.onClick.bind(this,this.props.letter)}>
+        return <a ref="cmp" href="#" style={this.getStyles()} 
+                onClick={this.onClick.bind(this,this.props.letter)}
+                onMouseDown={() => { this.setState({selected: true})}}
+                onMouseUp={() => { this.setState({selected: false})}}>
             {this.props.letter}
         </a>;
     }
