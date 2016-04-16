@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             'app-dev': {
                 devtool: 'source-map',
                 entry: {
-                    app: './src/app.jsx',
+                    app: ['babel-polyfill', './src/app.jsx' ],
                     'component-tests': './src/component-tests.jsx'
                 },
                 output: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             },
             'app-dist': {
                 entry: {
-                    app: './src/app.jsx'
+                    app: ['babel-polyfill', './src/app.jsx' ]
                 },
                 plugins: [
                     new webpack.optimize.UglifyJsPlugin({

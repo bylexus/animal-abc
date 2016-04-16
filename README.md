@@ -9,6 +9,8 @@ image which animal starts with the letter, and it is either "hooray!" or "booooh
 
 Check it out online: http://animal-abc.alexi.ch/
 
+Instructions: Not necessary, I think. Just click on a letter, then on the corresponding animal (or vice versa).
+
 Sounds from:
   - http://soundbible.com
   - http://www.freeinfosociety.com

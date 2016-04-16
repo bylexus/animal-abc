@@ -1,5 +1,8 @@
 let React = require('react');
 let AudioPlayer = require('../AudioPlayer.js');
+let Preloader = require('../Preloader.js');
+
+let imgPromise = Preloader.getImagePromise('resources/sad-smiley.png');
 
 let WrongDisplay = React.createClass({
     propTypes: {
@@ -11,7 +14,7 @@ let WrongDisplay = React.createClass({
     componentDidMount() {
         let delay = this.props.delay || 1000;
 
-        AudioPlayer.play('resources/honk.mp3');
+        AudioPlayer.play('wrong');
 
         setTimeout(() => {
             if (this.props.onDone instanceof Function) {
@@ -41,4 +44,5 @@ let WrongDisplay = React.createClass({
     }
 });
 
+WrongDisplay.imgPromise = imgPromise;
 module.exports = WrongDisplay;

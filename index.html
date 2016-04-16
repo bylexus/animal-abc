@@ -21,10 +21,13 @@
         margin: 0.5em 1em 0 1em;
     }
 
-    .title span{
-
+    .title span {
+        display: block;
         font-weight: normal;
         font-size: 10.5pt;
+    }
+    @media all and (min-device-width: 768px) {
+        .title span { display: inline-block; }
     }
 
     footer {

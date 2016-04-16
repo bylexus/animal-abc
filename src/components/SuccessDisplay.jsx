@@ -1,14 +1,16 @@
 let React = require('react');
 let AudioPlayer = require('../AudioPlayer.js');
+let Preloader = require('../Preloader.js');
+
+let imgPromise = Preloader.getImagePromise('resources/lucky-smiley.png');
 
 let SuccessDisplay = React.createClass({
     propTypes: {
         onDone: React.PropTypes.func
     },
 
-
     componentDidMount() {
-        AudioPlayer.play('resources/tadaa.mp3');
+        AudioPlayer.play('success');
     },
 
     clicked() {
@@ -38,4 +40,5 @@ let SuccessDisplay = React.createClass({
     }
 });
 
+SuccessDisplay.imgPromise = imgPromise;
 module.exports = SuccessDisplay;

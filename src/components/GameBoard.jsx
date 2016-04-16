@@ -9,6 +9,7 @@ let AudioPlayer = require('../AudioPlayer.js');
 let GameBoard = React.createClass({
     getInitialState() {
         return {
+            isLoading: true,
             selectedLetter: null,
             selectedImage: null,
             images: [],
@@ -19,6 +20,15 @@ let GameBoard = React.createClass({
     },
 
     componentDidMount() {
+        Promise.all([
+                SuccessDisplay.imgPromise,
+                WrongDisplay.imgPromise,
+                AudioPlayer.successPromise,
+                AudioPlayer.wrongPromise
+        ]).then(() => {
+            this.setState({isLoading: false});
+        });
+
         this.doReset();
     },
 
@@ -88,7 +98,7 @@ let GameBoard = React.createClass({
         let selected = this.state.selectedImage ? this.state.selectedImage.name : null;
         let wrong = this.state.isWrong ? (<WrongDisplay onDone={this.resetWrongState} />) : null;
         let success = this.state.allDiscovered ? (<SuccessDisplay onDone={this.doReset} />) : null;
-        return (
+        let content = (
             <div>
                 <div style={{
                     position: 'relative',
@@ -142,10 +152,14 @@ let GameBoard = React.createClass({
                         padding: '0.2em',
                         borderRadius: '100%'
                     }} onClick={this.doReset}>↺</a></div>
-
-
             </div>
         );
+        let loader = <div><img src="resources/ajax-loader.gif" /></div>;
+        if (this.state.isLoading) {
+            return loader;
+        } else {
+            return content;
+        }
     }
 });
 

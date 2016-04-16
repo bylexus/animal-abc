@@ -50,6 +50,8 @@ const images = [
     {name: 'Zebra', imageUrl: 'resources/animal-images/zebra1.jpg'}
 ];
 
+
+
 let getRandomImages = function(nr) {
     let randImgs = [];
     let tries = 0;
