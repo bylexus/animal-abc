@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             'app-dev': {
                 devtool: 'source-map',
                 entry: {
-                    app: ['babel-polyfill', './src/app.jsx' ],
+                    app: ['babel-polyfill', './src/app.jsx'],
                     'component-tests': './src/component-tests.jsx'
                 },
                 output: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             },
             'app-dist': {
                 entry: {
-                    app: ['babel-polyfill', './src/app.jsx' ]
+                    app: ['babel-polyfill', './src/app.jsx']
                 },
                 plugins: [
                     new webpack.optimize.UglifyJsPlugin({
@@ -73,12 +73,20 @@ module.exports = function(grunt) {
                     'dist/index.html': ['index.html']
                 }
             }
+        },
+
+        shell: {
+            distToProd: {
+                command: 'rsync -av --rsh="ssh -p 1979" dist/ alex@hal.alexi.ch:~/animal-abc/'
+            }
         }
     });
 
-    grunt.registerTask('dist', ['clean:dist', 'webpack:app-dist', 'processhtml:dist','copy:dist']);
+    grunt.registerTask('dist', ['clean:dist', 'webpack:app-dist', 'processhtml:dist', 'copy:dist']);
+    grunt.registerTask('deployProd', ['dist','shell:distToProd']);
 
     // Default task(s).
     grunt.registerTask('default', ['webpack:app-dev']);
 
 };
+
