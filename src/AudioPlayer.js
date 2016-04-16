@@ -1,16 +1,15 @@
 let audio = new Audio();
-let successAudio = null;
-let wrongAudio = null;
 let Preloader = require('./Preloader.js');
+
+let preloadedAudios = {
+    'success': {url: 'resources/tadaa.mp3', audioObject: null},
+    'wrong': {url: 'resources/honk.mp3', audioObject: null}
+};
 
 
 let play = function(url) {
-    if (url === 'success' && successAudio) {
-        successAudio.play();
-        return;
-    }
-    if (url === 'wrong' && wrongAudio) {
-        wrongAudio.play();
+    if (preloadedAudios[url] && preloadedAudios[url].audioObject) {
+        preloadedAudios[url].audioObject.play();
         return;
     }
     audio.src = url;
@@ -18,13 +17,15 @@ let play = function(url) {
     audio.play();
 };
 
-let successPromise = Preloader.getAudioPromise('resources/tadaa.mp3').then((obj) => successAudio = obj);
-let wrongPromise= Preloader.getAudioPromise('resources/honk.mp3').then((obj) => wrongAudio = obj);
+let audioPromises = [];
+Array.forEach(Object.keys(preloadedAudios), (key) => {
+    let conf = preloadedAudios[key];
+    audioPromises.push(Preloader.getAudioPromise(conf.url).then((obj) => conf.audioObject = obj));
+});
 
 
 module.exports = {
     play,
-    successPromise: successPromise,
-    wrongPromise: wrongPromise
+    preloadPromise: Promise.all(audioPromises)
 }
 

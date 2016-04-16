@@ -23,8 +23,7 @@ let GameBoard = React.createClass({
         Promise.all([
                 SuccessDisplay.imgPromise,
                 WrongDisplay.imgPromise,
-                AudioPlayer.successPromise,
-                AudioPlayer.wrongPromise
+                AudioPlayer.preloadPromise
         ]).then(() => {
             this.setState({isLoading: false});
         });
