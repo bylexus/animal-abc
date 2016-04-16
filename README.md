@@ -21,6 +21,18 @@ Images from:
   - https://pixabay.com
 
 
-This project uses ReactJS, grunt, webpack, BabelJS and a lot of sweat.
+This project uses ReactJS, grunt, webpack, BabelJS and a lot of sweat. Please feel free to use any of the code for yourself. If you do so, it would be nice
+to have  some kind of feedback.
+
+Development
+-----------
+
+```
+$ git clone https://github.com/bylexus/animal-abc.git
+$ cd animal-abc
+$ npm install
+$ grunt # (for debug-build and watch with webpack)
+$ grunt dist # (for a production build into the dist/ folder)
+```
 
 (c) 2016 Alexander Schenkel and the noted media sources
