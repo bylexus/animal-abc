@@ -5,6 +5,7 @@ let WrongDisplay = require('./WrongDisplay.jsx');
 let SuccessDisplay = require('./SuccessDisplay.jsx');
 let DataManager = require('../DataManager.js');
 let AudioPlayer = require('../AudioPlayer.js');
+let EventMgr = require('../EventMgr.js');
 
 let GameBoard = React.createClass({
     getInitialState() {
@@ -20,6 +21,7 @@ let GameBoard = React.createClass({
     },
 
     componentDidMount() {
+        EventMgr.register('reset', this.doReset,this);
         Promise.all([
                 SuccessDisplay.imgPromise,
                 WrongDisplay.imgPromise,
@@ -134,23 +136,6 @@ let GameBoard = React.createClass({
                     {wrong}
                     {success}
                 </div>
-
-                <div style={{textAlign: 'center',marginTop: '2em'}}>
-                    <a href="#" style={{
-                        display: 'inline-block',
-                        width: '1em',
-                        height: '1em',
-                        fontSize: '3.5em',
-                        textDecoration: 'none',
-                        color: 'white',
-                        backgroundColor: '#080',
-                        textAlign: 'center',
-                        lineHeight: '1em',
-                        verticalAlign: 'middle',
-                        border: '1px solid black',
-                        padding: '0.2em',
-                        borderRadius: '100%'
-                    }} onClick={this.doReset}>↺</a></div>
             </div>
         );
         let loader = <div><img src="resources/ajax-loader.gif" /></div>;

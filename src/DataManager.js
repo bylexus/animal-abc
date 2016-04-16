@@ -31,7 +31,7 @@ const images = [
     {name: 'Nashorn', imageUrl: 'resources/animal-images/nashorn1.jpg',soundUrl: 'resources/animal-sounds/nashorn1.mp3'},
     {name: 'Otter', imageUrl: 'resources/animal-images/otter1.jpg'},
     {name: 'Okapi', imageUrl: 'resources/animal-images/okapi1.jpg'},
-    {name: 'Panter', imageUrl: 'resources/animal-images/panter1.jpg',soundUrl: 'resources/animal-sounds/panter1.mp3'},
+    {name: 'Panther', imageUrl: 'resources/animal-images/panter1.jpg',soundUrl: 'resources/animal-sounds/panter1.mp3'},
     {name: 'Panda', imageUrl: 'resources/animal-images/panda1.jpg',soundUrl: 'resources/animal-sounds/panda1.mp3'},
     {name: 'Qualle', imageUrl: 'resources/animal-images/qualle1.jpg'},
     {name: 'Rentier', imageUrl: 'resources/animal-images/rentier1.jpg',soundUrl: 'resources/animal-sounds/rentier1.mp3'},
