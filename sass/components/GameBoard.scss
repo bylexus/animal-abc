@@ -1,0 +1,29 @@
+.game-board {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @media all and (min-device-width: $minDeviceWidth) and (orientation: landscape){
+        flex-direction: row;
+    }
+
+    .image-pad-container {
+        flex-grow: 1;
+        display: inline-flex;
+        border-bottom: none;
+        @media all and (min-device-width: $minDeviceWidth) and (orientation: landscape){
+            border-right: none;
+            border-bottom: 1px solid #888;
+        }
+    }        
+
+    .letter-pad-container {
+        display: inline-flex;
+        @media all and (min-device-width: $minDeviceWidth) and (orientation: landscape){
+            width: 40vw;
+            min-width: 30vw;
+        }
+
+    }
+}

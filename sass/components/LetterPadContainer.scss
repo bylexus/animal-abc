@@ -1,0 +1,12 @@
+.letter-pad-container {
+    padding: 1em;
+    background-color: #eee;
+    border: 1px solid #888;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .letter-pad {
+        margin: 0.1em;
+    }        
+}
+

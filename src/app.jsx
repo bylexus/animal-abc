@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var GameBoard = require('./components/GameBoard.jsx');
-var EventMgr = require('./EventMgr.js');
 
 var App = React.createClass({
     getInitialState() {
@@ -12,7 +11,7 @@ var App = React.createClass({
 
     doReset(e) {
         e.preventDefault();
-        EventMgr.fireEvent('reset');
+        this.refs.game.doReset();
     },
 
     render() {
@@ -35,7 +34,7 @@ var App = React.createClass({
                         borderRadius: '100%'
                     }} onClick={this.doReset}>↺</a>
                     </div>
-                <GameBoard /> 
+                <GameBoard ref="game"/> 
             </div>
         );
     }

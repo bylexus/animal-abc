@@ -79,11 +79,38 @@ module.exports = function(grunt) {
             distToProd: {
                 command: 'rsync -av --rsh="ssh -p 1979" dist/ alex@hal.alexi.ch:~/animal-abc/'
             }
+        },
+
+        sass: {
+            dev: {
+                options: {
+                    sourceMap: true
+                },
+                files: {
+                    'main.css': 'sass/main.scss'
+                }
+            },
+            dist: {
+                options: {
+                    sourceMap: false,
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'dist/main.css': 'sass/main.scss'
+                }
+            }
+        },
+
+        watch: {
+            sass: {
+                files: ['sass/**/*.scss'],
+                tasks: ['sass:dev']
+            }
         }
     });
 
-    grunt.registerTask('dist', ['clean:dist', 'webpack:app-dist', 'processhtml:dist', 'copy:dist']);
-    grunt.registerTask('deployProd', ['dist','shell:distToProd']);
+    grunt.registerTask('dist', ['clean:dist', 'sass:dist', 'webpack:app-dist', 'processhtml:dist', 'copy:dist']);
+    grunt.registerTask('deployProd', ['dist', 'shell:distToProd']);
 
     // Default task(s).
     grunt.registerTask('default', ['webpack:app-dev']);

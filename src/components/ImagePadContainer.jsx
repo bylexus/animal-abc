@@ -1,19 +1,18 @@
 var React = require('react');
 var ImagePad = require('./ImagePad.jsx');
+var classnames = require('classnames');
 
 let ImagePadContainer = React.createClass({
     propTypes: {
         onClick: React.PropTypes.func,
         images: React.PropTypes.array,
         discoveredImages: React.PropTypes.array,
-        selectedImage: React.PropTypes.string
+        selectedImage: React.PropTypes.string,
+        className: React.PropTypes.string
     },
 
     getStyles() {
         return {
-            display: 'inline-flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
         };
     },
 
@@ -28,7 +27,7 @@ let ImagePadContainer = React.createClass({
         let discovered = this.props.discoveredImages || [];
         let selected = this.props.selectedImage || null;
 
-        return <div style={this.getStyles()}>
+        return <div className={classnames(this.props.className,'image-pad-container')}>
             {images.map((imageConf) => {
                 return (
                 <ImagePad key={imageConf.name}

@@ -1,0 +1,15 @@
+.image-pad-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    background-color: #eee;
+    border: 1px solid #888;
+
+    .image-pad {
+        margin: 3px;
+        width: 15vw;
+        height: 15vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
