@@ -8,8 +8,16 @@
     line-height: 5vw;
     text-align: center;
     vertical-align: middle;
-    opacity: 0;
-    transition: background-color 0.25s, color 0.25s, opacity 0.5s;
+    transition: background-color 0.25s, color 0.25s;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
+
+.letter-pad-appear {
+    opacity: 0;
+    &.letter-pad-appear-active {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
+

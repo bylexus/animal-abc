@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 var classnames = require('classnames');
 
 let LetterPad = React.createClass({
@@ -13,11 +14,6 @@ let LetterPad = React.createClass({
         return {
             selected: false
         };
-    },
-    componentDidMount() {
-        window.requestAnimationFrame(() => {
-            this.refs.cmp.style.opacity = 1;
-        });
     },
 
     getStyles() {
@@ -36,7 +32,12 @@ let LetterPad = React.createClass({
     },
 
     render() {
-        return <a ref="cmp" 
+        return <ReactCSSTransitionGroup transitionName="letter-pad" 
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={0}>
+            <a ref="cmp" 
                 className={classnames(this.props.className,'letter-pad')}
                 href="#"
                 style={this.getStyles()} 
@@ -44,7 +45,8 @@ let LetterPad = React.createClass({
                 onMouseDown={() => { this.setState({selected: true})}}
                 onMouseUp={() => { this.setState({selected: false})}}>
             {this.props.letter}
-        </a>;
+        </a>
+        </ReactCSSTransitionGroup>;
     }
 });
 
